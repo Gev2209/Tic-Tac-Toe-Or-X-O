@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #56baed;
+}
+.select_box {
+    background: white;
+    padding: 20px 25px 25px;
+    border-radius: 5px;
+    max-width: 330px;
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    header {
+        font-size: 23px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 20px 0;
+    }
+    .options {
+        display: flex;
+        button {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 0;
+            border: none;
+            outline: none;
+            background: #56baed;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3 ease;
+            &:hover {
+                transform: scale(0.96);
+            }
+        }
+        .playerX {
+            margin-right: 5px;
+        }
+        .playerO {
+            margin-left: 5px;
+        }
+    }
+}
+.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0.9);
+}
+.play_board {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0.9);
+    .player_area {
+        margin-top: 20px;
+        i {
+            display: block;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .details {
+        background: white;
+        padding: 7px;
+        border-radius: 5px;
+        .players {
+            display: flex;
+            width: 100%;
+            position: relative;
+            justify-content: space-between;
+           
+            span {
+                width: 100%;
+                color: #56baed;
+                border-radius: 5px;
+                padding: 7px 0;
+                font-size: 19px;
+                font-weight: 500;
+                cursor: default;
+                text-align: center;
+                position: relative;
+                z-index: 5;
+                transition: all 0.3s ease;
+                &:first-child {
+                    color: white;
+                }
+            }   
+
+        }
+        .active {
+            span:first-child{
+                color: #56baed;
+            }
+            span:nth-child(2){
+                color: white;
+            }
+            .slider {
+                position: absolute;
+                left: 50%;
+            }
+        }
+
+        .slider {
+            position: absolute;
+            background: #56baed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            border-radius: 5px;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+    }
+    section {
+        display: flex;
+        span {
+            display: block;
+            margin: 3px;
+            height: 80px;
+            width: 80px;
+            background: white;
+            border-radius: 5px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 80px;
+            color: #56baed;
+        }
+    }
+}
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result_box {
+    position:absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+       
+
+    .won_text {
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        p {
+            font-weight: 700;
+            margin: 0 3px;
+        }
+    }
+   
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        button {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 20px;
+            border: none;
+            outline: none;
+            background: #56baed;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3 ease;
+            &:hover {
+                transform: scale(0.96);
+            }
+        }
+    }
+}
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
