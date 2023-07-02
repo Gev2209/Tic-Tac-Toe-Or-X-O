@@ -17,6 +17,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    box-shadow: 0 0 20px;
     header {
         font-size: 23px;
         font-weight: 600;
@@ -48,6 +49,7 @@ body {
         }
         .playerX {
             margin-right: 5px;
+            
         }
         .playerO {
             margin-left: 5px;
@@ -166,14 +168,14 @@ body {
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
-       
+    box-shadow: 0 0 20px;
 
     .won_text {
         font-size: 25px;
         display: flex;
         justify-content: center;
         @media screen and (max-width:430px) {
-            font-size: 16px;
+            font-size: 20px;
         }
         p {
             font-weight: 700;
