@@ -171,6 +171,7 @@ body {
 @media screen and (max-width: 430px) {
   .result_box .won_text {
     font-size: 18px;
+    width: 200px;
   }
 }
 .result_box .won_text p {
